@@ -1,0 +1,12 @@
+[    2115ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "new-password"): (More info: https://goo.gl/9p2vKq) %o @ https://demowebshop.tricentis.com/register:0
+[    2115ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "new-password"): (More info: https://goo.gl/9p2vKq) %o @ https://demowebshop.tricentis.com/register:0
+[   71349ms] [LOG] Found 3 button-like elements @ :2
+[   71350ms] [LOG] 0: INPUT - Search @ :6
+[   71350ms] [LOG] 1: INPUT - Subscribe @ :6
+[   71350ms] [LOG] 2: INPUT - Register @ :6
+[   76857ms] [LOG] Found 2 elements with register in class @ :12
+[   92926ms] [LOG] 0: Search @ :5
+[   92926ms] [LOG] 1: Subscribe @ :5
+[   92926ms] [LOG] 2: Register @ :5
+[   93753ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "new-password"): (More info: https://goo.gl/9p2vKq) @ https://demowebshop.tricentis.com/register:0
+[   93753ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "new-password"): (More info: https://goo.gl/9p2vKq) @ https://demowebshop.tricentis.com/register:0

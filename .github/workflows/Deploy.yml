@@ -1,0 +1,21 @@
+name : deploy project
+on:
+    push:
+        branches: [ main, master ]
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v2
+            - name: install dependencies
+              run: npm install
+            - name: build project
+              run: npm run build
+            - name: get ssh key and set permissions
+              run: |
+    
+              mkdir -p ~/.ssh
+                echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
+                chmod 600 ~/.ssh/id_rsa
+            -
