@@ -15,5 +15,6 @@ test.describe('User Registration and Authentication', () => {
     await page.locator(Locators.LoginButton).click();
     // expect: The login is successful — verify account options are shown (e.g., 'Log out')
     await expect(page.getByRole('link', { name: 'Log out' })).toBeVisible();
+    
   });
 });
