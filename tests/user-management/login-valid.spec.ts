@@ -8,5 +8,7 @@ test.describe('User Registration and Authentication', () => {
     await loginPage.navigateToLoginPage();
     await loginPage.login(data.Email, data.Password);
     await expect(loginPage.isLoginSuccessful()).resolves.toBe(true);
-  });
+
+   });
+   
 });

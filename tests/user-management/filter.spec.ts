@@ -1,6 +1,7 @@
 import {test, expect} from '@playwright/test';
 import { LoginPage } from '../../pages/login';
 import * as data from '../../data/Data.json';
+
 test.describe('User Management - Filter Functionality', () => {
   test('Filter products by category', async ({ page }) => {
     const loginPage = new LoginPage(page);

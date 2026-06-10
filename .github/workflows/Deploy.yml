@@ -15,5 +15,8 @@ jobs:
       - name: get ssh key and set permissions
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+      - name: deploy using scp
+        run: scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PATH}}:~/node-app
+      - name: restart server
+        run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} 'cd ~/node-app && npm install --production && pm2 restart all'
